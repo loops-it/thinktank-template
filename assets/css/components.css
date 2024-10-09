@@ -98,6 +98,20 @@ form label{
     font-family: "Poppins", sans-serif;
 }
 
+.password-container {
+    position: relative;
+  }
+  
+  .toggle-eye {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+  }
+  
 
 /* Responsive styles */
 /* ----------------------------------- */

@@ -8,11 +8,24 @@ function toggleFields() {
   const toggleSwitch = document.getElementById('flexSwitchCheck');
 
   if (toggleSwitch.checked) {
-      individualFields.style.display = 'none';
-      organizationFields.style.display = 'block';
+    individualFields.style.display = 'none';
+    organizationFields.style.display = 'block';
   } else {
-      individualFields.style.display = 'block';
-      organizationFields.style.display = 'none';
+    individualFields.style.display = 'block';
+    organizationFields.style.display = 'none';
+  }
+}
+
+function togglePasswordVisibility(passwordId, eyeIconId) {
+  const passwordField = document.getElementById(passwordId);
+  const eyeIcon = document.getElementById(eyeIconId);
+
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+    eyeIcon.src = "assets/img/EyeOpened.svg"; 
+  } else {
+    passwordField.type = "password";
+    eyeIcon.src = "assets/img/EyeClosed.svg"; 
   }
 }
 
@@ -31,28 +44,33 @@ document.getElementById('accountForm').addEventListener('submit', function (even
   const password = document.getElementById(accountType === 'individual' ? 'password' : 'orgPassword');
   const repeatPassword = document.getElementById(accountType === 'individual' ? 'repeatPassword' : 'orgRepeatPassword');
 
+  if (!password.value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)) {
+    setError(password, 'Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character.');
+    valid = false;
+  }
+
   if (password.value !== repeatPassword.value) {
-      setError(repeatPassword, 'Passwords do not match.');
-      valid = false;
+    setError(repeatPassword, 'Passwords do not match.');
+    valid = false;
   }
 
   if (!validateEmail(emailField.value)) {
-      setError(emailField, 'Please enter a valid email address.');
-      valid = false;
+    setError(emailField, 'Please enter a valid email address.');
+    valid = false;
   }
 
   if (!validatePhoneNumber(phoneField.value)) {
-      setError(phoneField, 'Phone number must be a 10-digit number.');
-      valid = false;
+    setError(phoneField, 'Phone number must be a 10-digit number.');
+    valid = false;
   }
 
-  if (!nameField.value) {
-      setError(nameField, 'Name cannot be empty.');
-      valid = false;
+  if (!nameField.value.trim()) {
+    setError(nameField, 'Name cannot be empty.');
+    valid = false;
   }
 
   if (valid) {
-      alert('Form submitted successfully!');
+    alert('Form submitted successfully!');
   }
 });
 

@@ -44,51 +44,71 @@
             <div class="toggle-container d-flex flex-row">
               <label class="mr-3" for="flexSwitchCheck">Individual</label>
               <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheck"
-                  onchange="toggleFields()">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheck" onchange="toggleFields()">
               </div>
               <label class="ml-3" for="flexSwitchCheck">Government and Organization</label>
             </div>
+          
             <div id="individualFields">
               <input type="text" class="custom-input" id="name" placeholder="Name" required>
               <div class="error" id="nameError"></div>
+          
               <input type="email" class="custom-input" id="email" placeholder="Email" required>
               <div class="error" id="emailError"></div>
+          
               <input type="tel" class="custom-input" id="phone" placeholder="Phone Number" required>
               <div class="error" id="phoneError"></div>
-              <input type="password" class="custom-input" id="password" placeholder="Password" required>
+          
+              <div class="password-container">
+                <input type="password" class="custom-input" id="password" placeholder="Password" required>
+                <img src="assets/img/EyeClosed.svg" class="toggle-eye" id="togglePassword" onclick="togglePasswordVisibility('password', 'togglePassword')">
+              </div>
               <div class="error" id="passwordError"></div>
-              <input type="password" class="custom-input" id="repeatPassword" placeholder="Repeat Password" required>
+          
+              <div class="password-container">
+                <input type="password" class="custom-input" id="repeatPassword" placeholder="Repeat Password" required>
+                <img src="assets/img/EyeClosed.svg" class="toggle-eye" id="toggleRepeatPassword" onclick="togglePasswordVisibility('repeatPassword', 'toggleRepeatPassword')">
+              </div>
               <div class="error" id="repeatPasswordError"></div>
             </div>
-
+          
             <div id="organizationFields" style="display: none;">
               <input type="text" class="custom-input" id="orgName" placeholder="Organization Name" required>
               <div class="error" id="orgNameError"></div>
+          
               <input type="text" class="custom-input" id="orgContactName" placeholder="Contact Name" required>
               <div class="error" id="orgContactNameError"></div>
+          
               <input type="email" class="custom-input" id="orgEmail" placeholder="Organization Email" required>
               <div class="error" id="orgEmailError"></div>
+          
               <input type="tel" class="custom-input" id="orgPhone" placeholder="Organization Phone Number" required>
               <div class="error" id="orgPhoneError"></div>
-              <input type="password" class="custom-input" id="orgPassword" placeholder="Password" required>
+          
+              <div class="password-container">
+                <input type="password" class="custom-input" id="orgPassword" placeholder="Password" required>
+                <img src="assets/img/EyeClosed.svg" class="toggle-eye" id="toggleOrgPassword" onclick="togglePasswordVisibility('orgPassword', 'toggleOrgPassword')">
+              </div>
               <div class="error" id="orgPasswordError"></div>
-              <input type="password" class="custom-input" id="orgRepeatPassword" placeholder="Repeat Password" required>
+          
+              <div class="password-container">
+                <input type="password" class="custom-input" id="orgRepeatPassword" placeholder="Repeat Password" required>
+                <img src="assets/img/EyeClosed.svg" class="toggle-eye" id="toggleOrgRepeatPassword" onclick="togglePasswordVisibility('orgRepeatPassword', 'toggleOrgRepeatPassword')">
+              </div>
               <div class="error" id="orgRepeatPasswordError"></div>
             </div>
-
+          
             <button type="submit" class="button font-poppins">CREATE MY ACCOUNT</button>
-
+          
             <div class="d-flex flex-column checkInput">
               <label class="mb-2">
-                <input type="checkbox" required class="font-poppins checkbox"> I have read and accept the Terms and
-                Conditions
+                <input type="checkbox" required class="font-poppins checkbox"> I have read and accept the Terms and Conditions
               </label>
               <label>
                 <input type="checkbox" class="font-poppins checkbox"> Subscribe to the newsletter to stay up to date
               </label>
             </div>
-          </form>
+          </form>          
 
 
         </div>
