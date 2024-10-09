@@ -29,9 +29,13 @@ function togglePasswordVisibility(passwordId, eyeIconId) {
   }
 }
 
+  
+
 document.getElementById('accountForm').addEventListener('submit', function (event) {
   event.preventDefault();
   let valid = true;
+
+  clearErrors();
 
   document.querySelectorAll('.error').forEach(el => el.textContent = '');
   document.querySelectorAll('.custom-input').forEach(input => input.classList.remove('is-invalid'));
@@ -44,6 +48,7 @@ document.getElementById('accountForm').addEventListener('submit', function (even
   const password = document.getElementById(accountType === 'individual' ? 'password' : 'orgPassword');
   const repeatPassword = document.getElementById(accountType === 'individual' ? 'repeatPassword' : 'orgRepeatPassword');
 
+  
   // if (!password.value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)) {
   //   setError(password, 'Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character.');
   //   valid = false;
@@ -85,6 +90,12 @@ function setError(element, message) {
   errorDiv.textContent = message;
   element.classList.add('is-invalid');
 }
+
+function clearErrors() {
+  document.querySelectorAll('.error').forEach(el => el.textContent = ''); // Clear error messages
+  document.querySelectorAll('.custom-input').forEach(input => input.classList.remove('is-invalid')); // Remove error styling
+}
+
 
 function validateEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
