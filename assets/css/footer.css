@@ -1,0 +1,71 @@
+.footer ul {
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin-right: 30px;
+}
+
+.footer ul li a {
+  color: #000000;
+}
+
+.footer ul li:last-child {
+  margin-right: 0;
+}
+
+.footer {
+  min-height: 80px;
+}
+
+.footer a{
+  text-decoration: none !important;
+}
+.text-size{
+  font-size: 16px;
+}
+
+/* Responsive styles */
+/* ----------------------------------- */
+/* ≤576px */
+@media screen and (max-width: 576px) {
+  .footer {
+    min-height: 50px;
+  }
+  .text-size{
+    font-size: 14px;
+  }
+}
+
+/* 577px - 992px */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .footer {
+    min-height: 60px;
+  }
+}
+
+/* 993px to 1600px */
+@media screen and (min-width: 993px) and (max-width: 1600px) {
+  .footer {
+    min-height: 80px;
+  }
+}
+
+/* ≥1601px */
+@media screen and (min-width: 1601px) {
+  .footer {
+    min-height: 100px;
+  }
+}
+
+/* 1366 x 768 */
+@media screen and (min-width: 1366px) and (max-width: 1367px) and (min-height: 95vh) and (max-height: 100vh) {
+  .footer {
+    min-height: 60px !important;
+  }
+  .text-size{
+    font-size: 14px;
+  }
+}

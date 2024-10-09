@@ -1,0 +1,195 @@
+/* Imports */
+/* ---------------- */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Variables */
+/* ---------------- */
+:root {
+  /* Breakpoints */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+
+  /* Font size */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+
+  /* Colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-black-transparent: rgba(0, 0, 0, 0.1);
+
+  --section-width: 100%;
+}
+
+/* Default Styles */
+/* ---------------- */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+section {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: calc(100% - 200px);
+  max-width: 1600px; 
+  margin: 0 auto;
+}
+
+.min-height-fit-to-screen{
+  min-height: 80px;
+}
+
+
+
+
+/* Responsive styles */
+/* ----------------------------------- */
+@media screen and (max-height: 720px) and (max-width: 600px) {
+  .fill-area-container {
+    overflow: scroll;
+    padding-top: 50px;
+  }
+
+  .mobile-scroll-sec {
+    margin-top: 160px;
+    margin-bottom: 40px;
+  }
+}
+
+/* ≤576px */
+@media screen and (max-width: 576px) {
+  section {
+    width: calc(100% - 20px);
+    max-width: 768px;
+  }
+}
+
+/* 577px - 768px */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  section {
+    width: calc(100% - 60px);
+    max-width: 992px;
+  }
+}
+
+/* 769px - 992px */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  section {
+    width: calc(100% - 80px);
+    max-width: 1200px; 
+  }
+}
+
+/* 993px to 1200px */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  section {
+    width: calc(100% - 100px); 
+    max-width: 1400px; 
+  }
+}
+
+/* 1201px to 1400px */
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+  section {
+    width: calc(100% - 100px); 
+    max-width: 1400px; 
+  }
+}
+
+/* 1401px to 1600px */
+@media screen and (min-width: 1401px) and (max-width: 1600px) {
+  section {
+    width: calc(100% - 150px); 
+    max-width: 1600px; 
+  }
+}
+
+/* ≥1601px */
+@media screen and (min-width: 1601px) {
+  section {
+    width: calc(100% - 200px); 
+    max-width: 1660px;
+  }
+}
+/* 1366 x 768 */
+@media screen and (min-width: 1366px) and (max-width: 1367px) and (min-height: 95vh) and (max-height: 100vh) {
+  .img-conainer img{
+    width: auto;
+    height: 93%;
+  }
+}
+
+
+
+/* Common Classes */
+/* ---------------- */
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.shadow-bottom{
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.fill-area-container{
+  overflow: hidden;
+}
+.scroll-area {
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+}
+
+.scroll-area::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+
+
+.checkInput input[type="checkbox"] {
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(0, 0, 0, 1); 
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+}
+
+.checkInput input[type="checkbox"]:checked {
+  background-color: rgba(217, 217, 217, 1);
+  border-color: rgba(0, 0, 0, 1); 
+}
+
+.checkInput input[type="checkbox"]:checked::after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='rgba(0, 0, 0, 1)' class='bi bi-check2' viewBox='0 0 16 16'%3E%3Cpath d='M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0'/%3E%3C/svg%3E") no-repeat center center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-size: contain;
+}
