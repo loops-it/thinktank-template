@@ -44,10 +44,16 @@ document.getElementById('accountForm').addEventListener('submit', function (even
   const password = document.getElementById(accountType === 'individual' ? 'password' : 'orgPassword');
   const repeatPassword = document.getElementById(accountType === 'individual' ? 'repeatPassword' : 'orgRepeatPassword');
 
-  if (!password.value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)) {
-    setError(password, 'Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character.');
+  // if (!password.value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)) {
+  //   setError(password, 'Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character.');
+  //   valid = false;
+  // }
+
+  if (password.value.length < 8) {
+    setError(password, 'Password must be at least 8 characters long.');
     valid = false;
   }
+  
 
   if (password.value !== repeatPassword.value) {
     setError(repeatPassword, 'Passwords do not match.');
