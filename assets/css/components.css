@@ -154,9 +154,16 @@ form label {
     color: rgba(124, 124, 124, 1);
     padding-left: 10px;
 }
+.form-text{
+    font-size: 18px;
+}
+
 /* Responsive styles */
 /* ----------------------------------- */
 @media screen and (max-width: 576px) {
+    .form-text{
+        font-size: 14px;
+    }
     form label {
         font-size: 12px;
     }
