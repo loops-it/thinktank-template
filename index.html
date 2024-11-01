@@ -1,198 +1,191 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Responsive Bootstrap Website with Reusable Components"
-    />
-    <title>Login | ThinkTank</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="assets/css/global.css" />
-    <link rel="stylesheet" href="assets/css/bootstrap-overrides.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
-    <link rel="stylesheet" href="assets/css/components.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
 
-  <body class="d-flex flex-column vh-100">
-    <!-- Navbar -->
-    <div class="shadow-bottom">
-      <section class="">
-        <nav class="navbar p-0 m-0">
-          <a class="navbar-brand font-inter m-0 p-0" href="/">
-            <img
-              src="assets/img/ThinktankX_logo.svg"
-              alt=""
-              style="width: 150px; height: auto"
-              class="img-fluid"
-            />
-          </a>
-        </nav>
-      </section>
-    </div>
-    <main class="flex-fill m-0 p-0 fill-area-container">
-      <section
-        class="h-100 d-flex flex-column justify-content-center scroll-area"
-      >
-        <div class="d-flex flex-column flex-lg-row">
-          <div
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            class="col-12 col-xl-7 p-0 p-lg-5 d-none d-xl-flex img-conainer justify-content-center align-items-center"
-          >
-            <img src="assets/img/register-side.png" alt="" class="img-fluid" />
-          </div>
-          <div
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            class="col-12 col-xl-5 p-0 p-lg-4 py-lg-5 d-flex justify-content-center align-items-center form-wrapper"
-          >
-            <!-- register form -->
-            <form
-              id="loginForm"
-              class="d-flex flex-column form-styles form-login login-form-gap"
-              novalidate
-            >
-              <div class="d-flex text-center w-100">
-                <h3
-                  class="text-uppercase w-100 text-center font-inter"
-                  style="font-weight: 700"
-                >
-                  LOGIN TO YOUR ACCOUNT
-                </h3>
-              </div>
-              <div class="toggle-container d-flex flex-row mb-3">
-                <label class="mr-3" for="flexSwitchCheck">Individual</label>
-                <div class="form-check form-switch">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    role="switch"
-                    id="flexSwitchCheck"
-                    onchange="toggleFields()"
-                  />
-                </div>
-                <label class="ml-3" for="flexSwitchCheck"
-                  >Government and Organization</label
-                >
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Responsive Bootstrap Website with Reusable Components" />
+  <title>Login | ThinkTank</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap-overrides.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
 
-              <div id="individualFields">
-                <input
-                  type="email"
-                  class="custom-input"
-                  id="email"
-                  placeholder="Email"
-                  required
-                />
-                <div class="error" id="emailError"></div>
-
-                <div class="password-container">
-                  <input
-                    type="password"
-                    class="custom-input"
-                    id="password"
-                    placeholder="Password"
-                    required
-                  />
-                </div>
-                <div class="error" id="passwordError"></div>
-              </div>
-
-              <div id="organizationFields" style="display: none">
-                <input
-                  type="email"
-                  class="custom-input"
-                  id="orgEmail"
-                  placeholder="Email"
-                  required
-                />
-                <div class="error" id="orgEmailError"></div>
-
-                <div class="password-container">
-                  <input
-                    type="password"
-                    class="custom-input"
-                    id="orgPassword"
-                    placeholder="Password"
-                    required
-                  />
-                </div>
-                <div class="error" id="orgPasswordError"></div>
-              </div>
-              <a href="/forgot-password.html" class="text-decoration-none link-styles"
-                >Forgot Password?</a
-              >
-
-              <button type="submit" class="button font-poppins mb-3">
-                CREATE MY ACCOUNT
-              </button>
-              <span class="link-styles-secondary d-flex align-self-center"
-                >Don’t have an account?<a
-                  href="/register.html"
-                  class="text-decoration-none"
-                >
-                  Register</a
-                ></span
-              >
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <section class="" style="border-top: solid 1px #000">
-      <footer
-        class="footer w-100 py-3 px-0 mx-0 d-flex flex-column-reverse flex-md-row align-items-center"
-      >
-        <div
-          class="col-12 col-md-6 px-0 mx-0 d-flex text-center text-md-start justify-content-center justify-content-md-start"
-        >
-          <p class="font-poppins mb-0 text-size">
-            Copyright &copy; <span id="year"></span> ThinktankX. All Rights
-            Reserved.
-          </p>
-        </div>
-        <div
-          class="col-12 col-md-6 px-0 mx-0 d-flex text-center text-md-end justify-content-center justify-content-md-end"
-        >
-          <ul class="d-flex flex-row">
-            <li>
-              <a href="#" class="font-poppins mb-0 text-size"
-                >Terms and conditions</a
-              >
-            </li>
-            <li class="d-block d-md-none">|</li>
-            <li>
-              <a href="#" class="font-poppins mb-0 text-size">Privacy policy</a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+<body class="d-flex flex-column vh-100">
+  <!-- Navbar -->
+  <div class="shadow-bottom">
+    <section class="">
+      <nav class="navbar p-0 m-0">
+        <a class="navbar-brand font-inter m-0 p-0" href="/">
+          <img src="assets/img/ThinktankX_logo.svg" alt="" style="width: 150px; height: auto" class="img-fluid" />
+        </a>
+      </nav>
     </section>
+  </div>
+  <main class="flex-fill m-0 p-0 fill-area-container">
+    <section class="h-100 d-flex flex-column justify-content-center scroll-area">
+      <div class="d-flex flex-column flex-lg-row">
+        <div data-aos="fade-right" data-aos-duration="1000"
+          class="col-12 col-xl-7 p-0 p-lg-5 d-none d-xl-flex img-conainer justify-content-center align-items-center">
+          <img src="assets/img/register-side.png" alt="" class="img-fluid" />
+        </div>
+        <div data-aos="fade-left" data-aos-duration="1000"
+          class="col-12 col-xl-5 p-0 p-lg-4 py-lg-5 d-flex justify-content-center align-items-center form-wrapper">
+          <!-- register form -->
+          <form id="loginForm" class="d-flex flex-column form-styles form-login login-form-gap" novalidate>
+            <div class="d-flex text-center w-100">
+              <h3 class="text-uppercase w-100 text-center font-inter" style="font-weight: 700">
+                LOGIN TO YOUR ACCOUNT
+              </h3>
+            </div>
+            <div class="toggle-container d-flex flex-row mb-3">
+              <label class="mr-3" for="flexSwitchCheck">Individual</label>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheck"
+                  onchange="toggleFields()" />
+              </div>
+              <label class="ml-3" for="flexSwitchCheck">Government and Organization</label>
+            </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="assets/js/script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+            <div id="individualFields">
+              <!-- individual email -->
+              <div class="input-icon-container">
+                <span class="input-icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="21" height="21" fill="url(#pattern0_728_10776)" />
+                    <defs>
+                      <pattern id="pattern0_728_10776" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_728_10776" transform="scale(0.01)" />
+                      </pattern>
+                      <image id="image0_728_10776" width="100" height="100"
+                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEoElEQVR4nO2dSYgeRRTHfxOXGDEYt0RFjaKiohIXXAIKSrxNTmJcxyiixps3BVHEm3oTJpgR40FcIFePiuIWUdwwLnGFKBIVHcHJGEcz80nha/kI6f66eqq7q6v/P3iXGaZe1ft3db9aB4QQQgghhBBCCCGEEEIIIYQPq4ALgfXAhsRtvbXVtTkqXKUeB74GBj21r4DHgDVtCrEaeBZYiCAgg0jMxWIbcEbTYrguOxtBAAaR2l5goikxHlavoGxveahuMe6I4OkbdMw21SXGFcDfJSuxB5hO3PaUjMUcsDa0GEuAD0c4fsO+LSvoD0dZm98cEZv3gbGQjicKnP1lr7K+c6fFIi9ON4V0tr3gw3VtSEcd57qChOetUE6OB+ZznDwVyklCbM2J1XyoUf1tBb3jlBAOEuPUgl5ya6hxR96HShyYvAQoyLhkKqfw50IUnigv5MRsS4jCt+UUvjlE4YmyOSdmLpa1CTIZovBEmWxDkFd6NggsywqLTeOCOPsNuB9YFsJRxzkUuBv4uSBetQuS2Q9WmYPoH0ts+uTbEnFqTJDMPrPK9YVrgI884tO4IJltt9nhVLkEeLVCXFoTJLOXgDNJh9WLXLZuXZCBraG4weUJdJdjgUdHzOa2Lsj3tvhStjIzwCPAcrrDcqvzjEc75yw2jQsyaZOLUwWzwQeyXy1VXkq8HGJZ4+6KO04m2x6pn2ffC5/uu8sa7dLGWBizLNF3j9nLwMVD5bQuyHAa+IFnY3YA47TPOpvB9qn7pzlpfjSCDD9l31R4yi6iec6tkLjsGjEQjkqQ/d/DP1V4D59O/Zxs3799Fb5/h40oO0pBMo6wRvxRIVVeRXiOthR2r0d9Zu1vjizpI2pBMo4DngD+8QjEjAUiRKp8uD0Yv3v4n7eB4ImevjohSMZZVqbPaPcX4F7g4Ar+XBa3Efixwjft/Ipt7JQgGZcCr3kGaaclDGU3nbms7xNPH+8AVy6ybZ0UZDhoH3sG7V3gqoIyLwde9yzz84Az1Z0WZHhN4bsKr5XhQzJnV0hh61jL6bwgGcuA+2wzc9mA7rPNaVs9U9hp81XHamcyggxvYnbZ1Z+eT3vZyb8py/rqIjlBMk6qMHgrSmFdW06jfpIVJOOcRa7LuG/NBTRH8oJkrLVzKGWFeA+4mubpjSDDqfKOAiG+9ByvhKZ3gmSTl/fst4i0237mftcmvRQkY6n1mHURrUL2WpAYkSCRIUEiQ4JEhgSJDAkSGRIkMiRIZEiQyJAgkdGKIDoW3dKx6C05hT8fovBEeTEnZk+GKFxXa0R2tcbGnMIX7IiXKH/5zETd1zM9HcJBYjyTEyu3L2BlKCdvF/QSd2mX+I/rC3qHuwYwGDeP2FZzV0hnHWXTiDOXNxJ4Z+Gok1HuCrsbbLt/XzjG2pz3BhnebDFWx46POY/zFNOJ22zJWLiYXUZN3F6yEjL+j0Htr/MHddU4ZR4493F/gIZwmZUu4ydXDHdc7hYapsqlAanbQoOHVnNZYzvVd0YQkEFL9oXFoOoRuNpYaZuaxyP4l0QbarZxa2udxxqEEEIIIYQQQgghhBBCCCFIjX8BHBUzvaXJ8ZMAAAAASUVORK5CYII=" />
+                    </defs>
+                  </svg>
+                </span>
+                <input type="email" class="custom-input with-icon custom-input-with-prefixicon" id="orgEmail"
+                  placeholder="Email" required />
+              </div>
+              <div class="error" id="orgEmailError"></div>
+              <!-- individual password -->
+
+              <div class="input-icon-container">
+                <span class="input-icon"><svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect y="16.4639" width="23.2834" height="23.2834" transform="rotate(-45 0 16.4639)"
+                      fill="url(#pattern0_728_10774)" />
+                    <defs>
+                      <pattern id="pattern0_728_10774" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_728_10774" transform="scale(0.01)" />
+                      </pattern>
+                      <image id="image0_728_10774" width="100" height="100"
+                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEf0lEQVR4nO2db8ieUxzHPzz+y7WV1BqL2Ju1EnljsiTkT95QDCnNitFsygtCPaWoDUWIpPS8eqjlxebVHiWlxJq0sPlTprA9Ypkw07Zbp3537u6cc5/rvq8/53rO91Ontdquc87v81zX+fM71/WAEEIIIYQQQggh8uM04HJgLTANbAFeBJ4BNgE3AkvbbuRCpwDWAXPAX0AvouwBNgMr2278QuIcC+rvkRJ8ZQewuu3OdJkTgAeAgxOK6A2VWWBJ253rGmcD71YsojdQ5oHr2u5kVzgf+KpGGT0rR4H1bXc2dS4AfigRVDeufAG8B2wDPrH/f7zENTa23emUH1NfRwRwv01zrwSmPNdaBjwIfBBxvWPAmob72okBfNSYcQh4Ejiz5LWvBXaNuPYfwIqa+tZJ1o8I2OfAhRNcfwp4bkQduwJ3XHbrjNDUds4WhVVwrz2ifHVtqKieTrM5EKAvgUUV1/dEoL4DwBlkTBFYgR+a8DEVGq+2BqS4yUC2rAsExg3gdXEu8Ken3p1kzFxgalt2NlWWLYEfhuVkuoXu27V140oTi9Cep9xPhqwKBMQt+ppgt6f+GTJkbWAwb2o98KynDR+TIdOeYLi9qabYEJj+Zodv5ewG+qa41dMGNwPLjhc8wdjeYBuu97ThCBnydALrgLs9bfiJDHnYEwyXz2iKRwObmdlxkycYxy2f0QTbPW14hwxZ2vJ+0qnAb576HyNT9ngC4jJ9dXNP4AfiKjIltPXuMn11cSLwmafeH3NOVK1sKYP3UKBet+mYNTsCwXm+hvouC+Rg/gEuInNWB4T0LO1aFcuA7wJ1vVZhXZ1mNhAklwN/3DJ9k3CJjQ8h+VdU1J/Os8SOd4aCtXXM9cnJtgiNOay9z/Ikws7aHh0RsMM26Mbk2s8C7gL2RoiQFA/3lQjcbstnuBnTLTZNvt22Q7aZvN6YRXfKABtHnJ1qquzT4+s/1tjxzjoDPgN8JCnxrIg4kztOOWiPtv65MEkpwZSlWQ9UIOJvW2ecN1SHpIzB6bYDvHMMEb/Yij/0Vq6kTMByOzc1Yy/ozFsO/Jg9jvZanmMauBo4KfK6MVLcKl/rlAYpIqR8X9OZY+FBUhKk0J2SHoWkpEchKelRSEp6FJKSHoWkpEchKelRSEp6FJKSHoWkpEchKelRaJc4PQrdKemxKOJsmQ5ONIQ7VflSZAZT+ZSEZEhKgjIkJUEZklKDjFdGBPuwnf/Sua8E7owjwM327zUlTkhGH0lJSEYfSWlhzLhhxHV0QjIhGX0kZUI2VSijj6RMwDcVy8DOG78dsU7R3tf/MF+DjLdKLB4lZYg3K5YRegVcUiJ/jcaHA8H6GbiG5mToTvFwqX11wr08VIcM9zXWTyWlfmJlrIqcfX0LLG6g3Qv2HcnZSBl9YqQ80mKfOs0bJWXESnm1hb50novHlBEjxX3xQpTkzglkDEoZ/sVm7wOnlG2MwHuHxMoY/JrRHcBT9qf7uxiT14dk/FpShqhhp/g24GV7b374KxJCCCGEEEIIIYQgJ/4Fimi/yTSEFwMAAAAASUVORK5CYII=" />
+                    </defs>
+                  </svg>
+                </span>
+                <input type="password" class="custom-input with-icon custom-input-with-prefixicon" id="orgPassword"
+                  placeholder="Password" required />
+              </div>
+              <div class="error" id="orgPasswordError"></div>
+            </div>
+
+            <div id="organizationFields" style="display: none">
+              <!-- org email -->
+
+              <div class="input-icon-container">
+                <span class="input-icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="21" height="21" fill="url(#pattern0_728_10776)" />
+                    <defs>
+                      <pattern id="pattern0_728_10776" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_728_10776" transform="scale(0.01)" />
+                      </pattern>
+                      <image id="image0_728_10776" width="100" height="100"
+                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEoElEQVR4nO2dSYgeRRTHfxOXGDEYt0RFjaKiohIXXAIKSrxNTmJcxyiixps3BVHEm3oTJpgR40FcIFePiuIWUdwwLnGFKBIVHcHJGEcz80nha/kI6f66eqq7q6v/P3iXGaZe1ft3db9aB4QQQgghhBBCCCGEEEIIIYQPq4ALgfXAhsRtvbXVtTkqXKUeB74GBj21r4DHgDVtCrEaeBZYiCAgg0jMxWIbcEbTYrguOxtBAAaR2l5goikxHlavoGxveahuMe6I4OkbdMw21SXGFcDfJSuxB5hO3PaUjMUcsDa0GEuAD0c4fsO+LSvoD0dZm98cEZv3gbGQjicKnP1lr7K+c6fFIi9ON4V0tr3gw3VtSEcd57qChOetUE6OB+ZznDwVyklCbM2J1XyoUf1tBb3jlBAOEuPUgl5ya6hxR96HShyYvAQoyLhkKqfw50IUnigv5MRsS4jCt+UUvjlE4YmyOSdmLpa1CTIZovBEmWxDkFd6NggsywqLTeOCOPsNuB9YFsJRxzkUuBv4uSBetQuS2Q9WmYPoH0ts+uTbEnFqTJDMPrPK9YVrgI884tO4IJltt9nhVLkEeLVCXFoTJLOXgDNJh9WLXLZuXZCBraG4weUJdJdjgUdHzOa2Lsj3tvhStjIzwCPAcrrDcqvzjEc75yw2jQsyaZOLUwWzwQeyXy1VXkq8HGJZ4+6KO04m2x6pn2ffC5/uu8sa7dLGWBizLNF3j9nLwMVD5bQuyHAa+IFnY3YA47TPOpvB9qn7pzlpfjSCDD9l31R4yi6iec6tkLjsGjEQjkqQ/d/DP1V4D59O/Zxs3799Fb5/h40oO0pBMo6wRvxRIVVeRXiOthR2r0d9Zu1vjizpI2pBMo4DngD+8QjEjAUiRKp8uD0Yv3v4n7eB4ImevjohSMZZVqbPaPcX4F7g4Ar+XBa3Efixwjft/Ipt7JQgGZcCr3kGaaclDGU3nbms7xNPH+8AVy6ybZ0UZDhoH3sG7V3gqoIyLwde9yzz84Az1Z0WZHhN4bsKr5XhQzJnV0hh61jL6bwgGcuA+2wzc9mA7rPNaVs9U9hp81XHamcyggxvYnbZ1Z+eT3vZyb8py/rqIjlBMk6qMHgrSmFdW06jfpIVJOOcRa7LuG/NBTRH8oJkrLVzKGWFeA+4mubpjSDDqfKOAiG+9ByvhKZ3gmSTl/fst4i0237mftcmvRQkY6n1mHURrUL2WpAYkSCRIUEiQ4JEhgSJDAkSGRIkMiRIZEiQyJAgkdGKIDoW3dKx6C05hT8fovBEeTEnZk+GKFxXa0R2tcbGnMIX7IiXKH/5zETd1zM9HcJBYjyTEyu3L2BlKCdvF/QSd2mX+I/rC3qHuwYwGDeP2FZzV0hnHWXTiDOXNxJ4Z+Gok1HuCrsbbLt/XzjG2pz3BhnebDFWx46POY/zFNOJ22zJWLiYXUZN3F6yEjL+j0Htr/MHddU4ZR4493F/gIZwmZUu4ydXDHdc7hYapsqlAanbQoOHVnNZYzvVd0YQkEFL9oXFoOoRuNpYaZuaxyP4l0QbarZxa2udxxqEEEIIIYQQQgghhBBCCCFIjX8BHBUzvaXJ8ZMAAAAASUVORK5CYII=" />
+                    </defs>
+                  </svg>
+                </span>
+                <input type="email" class="custom-input with-icon custom-input-with-prefixicon" id="orgEmail"
+                  placeholder="Email" required />
+              </div>
+              <div class="error" id="orgEmailError"></div>
+
+              <!-- org password -->
+              <div class="input-icon-container">
+                <span class="input-icon">
+                  <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect y="16.4639" width="23.2834" height="23.2834" transform="rotate(-45 0 16.4639)"
+                      fill="url(#pattern0_728_10774)" />
+                    <defs>
+                      <pattern id="pattern0_728_10774" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_728_10774" transform="scale(0.01)" />
+                      </pattern>
+                      <image id="image0_728_10774" width="100" height="100"
+                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEf0lEQVR4nO2db8ieUxzHPzz+y7WV1BqL2Ju1EnljsiTkT95QDCnNitFsygtCPaWoDUWIpPS8eqjlxebVHiWlxJq0sPlTprA9Ypkw07Zbp3537u6cc5/rvq8/53rO91Ontdquc87v81zX+fM71/WAEEIIIYQQQggh8uM04HJgLTANbAFeBJ4BNgE3AkvbbuRCpwDWAXPAX0AvouwBNgMr2278QuIcC+rvkRJ8ZQewuu3OdJkTgAeAgxOK6A2VWWBJ253rGmcD71YsojdQ5oHr2u5kVzgf+KpGGT0rR4H1bXc2dS4AfigRVDeufAG8B2wDPrH/f7zENTa23emUH1NfRwRwv01zrwSmPNdaBjwIfBBxvWPAmob72okBfNSYcQh4Ejiz5LWvBXaNuPYfwIqa+tZJ1o8I2OfAhRNcfwp4bkQduwJ3XHbrjNDUds4WhVVwrz2ifHVtqKieTrM5EKAvgUUV1/dEoL4DwBlkTBFYgR+a8DEVGq+2BqS4yUC2rAsExg3gdXEu8Ken3p1kzFxgalt2NlWWLYEfhuVkuoXu27V140oTi9Cep9xPhqwKBMQt+ppgt6f+GTJkbWAwb2o98KynDR+TIdOeYLi9qabYEJj+Zodv5ewG+qa41dMGNwPLjhc8wdjeYBuu97ThCBnydALrgLs9bfiJDHnYEwyXz2iKRwObmdlxkycYxy2f0QTbPW14hwxZ2vJ+0qnAb576HyNT9ngC4jJ9dXNP4AfiKjIltPXuMn11cSLwmafeH3NOVK1sKYP3UKBet+mYNTsCwXm+hvouC+Rg/gEuInNWB4T0LO1aFcuA7wJ1vVZhXZ1mNhAklwN/3DJ9k3CJjQ8h+VdU1J/Os8SOd4aCtXXM9cnJtgiNOay9z/Ikws7aHh0RsMM26Mbk2s8C7gL2RoiQFA/3lQjcbstnuBnTLTZNvt22Q7aZvN6YRXfKABtHnJ1qquzT4+s/1tjxzjoDPgN8JCnxrIg4kztOOWiPtv65MEkpwZSlWQ9UIOJvW2ecN1SHpIzB6bYDvHMMEb/Yij/0Vq6kTMByOzc1Yy/ozFsO/Jg9jvZanmMauBo4KfK6MVLcKl/rlAYpIqR8X9OZY+FBUhKk0J2SHoWkpEchKelRSEp6FJKSHoWkpEchKelRSEp6FJKSHoWkpEchKelRaJc4PQrdKemxKOJsmQ5ONIQ7VflSZAZT+ZSEZEhKgjIkJUEZklKDjFdGBPuwnf/Sua8E7owjwM327zUlTkhGH0lJSEYfSWlhzLhhxHV0QjIhGX0kZUI2VSijj6RMwDcVy8DOG78dsU7R3tf/MF+DjLdKLB4lZYg3K5YRegVcUiJ/jcaHA8H6GbiG5mToTvFwqX11wr08VIcM9zXWTyWlfmJlrIqcfX0LLG6g3Qv2HcnZSBl9YqQ80mKfOs0bJWXESnm1hb50novHlBEjxX3xQpTkzglkDEoZ/sVm7wOnlG2MwHuHxMoY/JrRHcBT9qf7uxiT14dk/FpShqhhp/g24GV7b374KxJCCCGEEEIIIYQgJ/4Fimi/yTSEFwMAAAAASUVORK5CYII=" />
+                    </defs>
+                  </svg>
+                </span>
+                <input type="password" class="custom-input with-icon custom-input-with-prefixicon" id="orgPassword"
+                  placeholder="Password" required />
+              </div>
+              <div class="error" id="orgPasswordError"></div>
+            </div>
+            <a href="/forgot-password.html" class="text-decoration-none link-styles">Forgot Password?</a>
+
+            <button type="submit" class="button font-poppins mb-3">
+              CREATE MY ACCOUNT
+            </button>
+            <span class="link-styles-secondary d-flex align-self-center">Don’t have an account?<a href="/register.html"
+                class="text-decoration-none">
+                Register</a></span>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <section class="" style="border-top: solid 1px #000">
+    <footer class="footer w-100 py-3 px-0 mx-0 d-flex flex-column-reverse flex-md-row align-items-center">
+      <div
+        class="col-12 col-md-6 px-0 mx-0 d-flex text-center text-md-start justify-content-center justify-content-md-start">
+        <p class="font-poppins mb-0 text-size">
+          Copyright &copy; <span id="year"></span> ThinktankX. All Rights
+          Reserved.
+        </p>
+      </div>
+      <div
+        class="col-12 col-md-6 px-0 mx-0 d-flex text-center text-md-end justify-content-center justify-content-md-end">
+        <ul class="d-flex flex-row">
+          <li>
+            <a href="#" class="font-poppins mb-0 text-size">Terms and conditions</a>
+          </li>
+          <li class="d-block d-md-none">|</li>
+          <li>
+            <a href="#" class="font-poppins mb-0 text-size">Privacy policy</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
 </html>

@@ -169,6 +169,28 @@ form label {
     border: solid 1px #000;
   }
 
+  .input-icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .input-icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 8px;
+    color: #666;
+    font-size: 1.2em;
+  }
+
+  .with-icon {
+    padding-left: 2em; 
+  }
+
+  .custom-input-with-prefixicon {
+    padding-left: 45px !important;
+  }
 /* Responsive styles */
 /* ----------------------------------- */
 @media screen and (max-width: 576px) {
