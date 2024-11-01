@@ -57,7 +57,7 @@
           >
             <!-- register form -->
             <form
-              id="accountForm"
+              id="loginForm"
               class="d-flex flex-column form-styles form-login login-form-gap"
               novalidate
             >
@@ -103,12 +103,6 @@
                     placeholder="Password"
                     required
                   />
-                  <img
-                    src="assets/img/EyeClosed.svg"
-                    class="toggle-eye"
-                    id="togglePassword"
-                    onclick="togglePasswordVisibility('password', 'togglePassword')"
-                  />
                 </div>
                 <div class="error" id="passwordError"></div>
               </div>
@@ -130,12 +124,6 @@
                     id="orgPassword"
                     placeholder="Password"
                     required
-                  />
-                  <img
-                    src="assets/img/EyeClosed.svg"
-                    class="toggle-eye"
-                    id="toggleOrgPassword"
-                    onclick="togglePasswordVisibility('orgPassword', 'toggleOrgPassword')"
                   />
                 </div>
                 <div class="error" id="orgPasswordError"></div>

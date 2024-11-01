@@ -16,18 +16,7 @@ function toggleFields() {
   }
 }
 
-function togglePasswordVisibility(passwordId, eyeIconId) {
-  const passwordField = document.getElementById(passwordId);
-  const eyeIcon = document.getElementById(eyeIconId);
 
-  if (passwordField.type === "password") {
-    passwordField.type = "text";
-    eyeIcon.src = "assets/img/EyeOpened.svg"; 
-  } else {
-    passwordField.type = "password";
-    eyeIcon.src = "assets/img/EyeClosed.svg"; 
-  }
-}
 
   
 

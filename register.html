@@ -1,306 +1,190 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Responsive Bootstrap Website with Reusable Components"
-    />
-    <title>Register | ThinkTank</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="assets/css/global.css" />
-    <link rel="stylesheet" href="assets/css/bootstrap-overrides.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
-    <link rel="stylesheet" href="assets/css/components.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
 
-  <body class="d-flex flex-column vh-100">
-    <!-- Navbar -->
-    <div class="shadow-bottom">
-      <section class="">
-        <nav class="navbar p-0 m-0">
-          <a class="navbar-brand font-inter m-0 p-0" href="/">
-            <img
-              src="assets/img/ThinktankX_logo.svg"
-              alt=""
-              style="width: 150px; height: auto"
-              class="img-fluid"
-            />
-          </a>
-        </nav>
-      </section>
-    </div>
-    <main class="flex-fill m-0 p-0 fill-area-container">
-      <section
-        class="h-100 d-flex flex-column justify-content-center scroll-area"
-      >
-        <div class="d-flex flex-column flex-lg-row mobile-scroll-sec">
-          <div
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            class="col-12 col-xl-7 p-0 p-lg-5 d-none d-xl-flex img-conainer justify-content-center align-items-center"
-          >
-            <img src="assets/img/register-side.png" alt="" class="img-fluid" />
-          </div>
-          <div
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            class="col-12 col-xl-5 p-0 p-lg-4 d-flex justify-content-center align-items-center form-wrapper"
-          >
-            <!-- register form -->
-            <form
-              id="accountForm"
-              class="d-flex flex-column form-styles"
-              novalidate
-            >
-              <div class="d-flex text-center w-100">
-                <h3
-                  class="text-uppercase w-100 text-center font-inter"
-                  style="font-weight: 700"
-                >
-                  Register Your Account
-                </h3>
-              </div>
-              <div class="toggle-container d-flex flex-row">
-                <label class="mr-3" for="flexSwitchCheck">Individual</label>
-                <div class="form-check form-switch">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    role="switch"
-                    id="flexSwitchCheck"
-                    onchange="toggleFields()"
-                  />
-                </div>
-                <label class="ml-3" for="flexSwitchCheck"
-                  >Government and Organization</label
-                >
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Responsive Bootstrap Website with Reusable Components" />
+  <title>Register | ThinkTank</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap-overrides.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
 
-              <div id="individualFields">
-                <input
-                  type="text"
-                  class="custom-input"
-                  id="name"
-                  placeholder="Name"
-                  required
-                />
-                <div class="error" id="nameError"></div>
-
-                <input
-                  type="email"
-                  class="custom-input"
-                  id="email"
-                  placeholder="Email"
-                  required
-                />
-                <div class="error" id="emailError"></div>
-
-                <input
-                  type="tel"
-                  class="custom-input"
-                  id="phone"
-                  placeholder="Phone Number"
-                  required
-                />
-                <div class="error" id="phoneError"></div>
-
-                <div class="password-container">
-                  <input
-                    type="password"
-                    class="custom-input"
-                    id="password"
-                    placeholder="Password"
-                    required
-                  />
-                  <img
-                    src="assets/img/EyeClosed.svg"
-                    class="toggle-eye"
-                    id="togglePassword"
-                    onclick="togglePasswordVisibility('password', 'togglePassword')"
-                  />
-                </div>
-                <div class="error" id="passwordError"></div>
-
-                <div class="password-container">
-                  <input
-                    type="password"
-                    class="custom-input"
-                    id="repeatPassword"
-                    placeholder="Repeat Password"
-                    required
-                  />
-                  <img
-                    src="assets/img/EyeClosed.svg"
-                    class="toggle-eye"
-                    id="toggleRepeatPassword"
-                    onclick="togglePasswordVisibility('repeatPassword', 'toggleRepeatPassword')"
-                  />
-                </div>
-                <div class="error" id="repeatPasswordError"></div>
-              </div>
-
-              <div id="organizationFields" style="display: none">
-                <input
-                  type="text"
-                  class="custom-input"
-                  id="orgName"
-                  placeholder="Organization Name"
-                  required
-                />
-                <div class="error" id="orgNameError"></div>
-
-                <input
-                  type="text"
-                  class="custom-input"
-                  id="orgContactName"
-                  placeholder="Name"
-                  required
-                />
-                <div class="error" id="orgContactNameError"></div>
-
-                <input
-                  type="email"
-                  class="custom-input"
-                  id="orgEmail"
-                  placeholder="Email"
-                  required
-                />
-                <div class="error" id="orgEmailError"></div>
-
-                <input
-                  type="tel"
-                  class="custom-input"
-                  id="orgPhone"
-                  placeholder="Phone number"
-                  required
-                />
-                <div class="error" id="orgPhoneError"></div>
-
-                <div class="password-container">
-                  <input
-                    type="password"
-                    class="custom-input"
-                    id="orgPassword"
-                    placeholder="Password"
-                    required
-                  />
-                  <img
-                    src="assets/img/EyeClosed.svg"
-                    class="toggle-eye"
-                    id="toggleOrgPassword"
-                    onclick="togglePasswordVisibility('orgPassword', 'toggleOrgPassword')"
-                  />
-                </div>
-                <div class="error" id="orgPasswordError"></div>
-
-                <div class="password-container">
-                  <input
-                    type="password"
-                    class="custom-input"
-                    id="orgRepeatPassword"
-                    placeholder="Repeat Password"
-                    required
-                  />
-                  <img
-                    src="assets/img/EyeClosed.svg"
-                    class="toggle-eye"
-                    id="toggleOrgRepeatPassword"
-                    onclick="togglePasswordVisibility('orgRepeatPassword', 'toggleOrgRepeatPassword')"
-                  />
-                </div>
-                <div class="error" id="orgRepeatPasswordError"></div>
-              </div>
-
-              <button type="submit" class="button font-poppins">
-                CREATE MY ACCOUNT
-              </button>
-
-              <div class="d-flex flex-column checkInput">
-                <label class="mb-2 mb-2 d-flex flex-row align-items-center">
-                  <input
-                    type="checkbox"
-                    checked
-                    required
-                    class="font-poppins checkbox me-1"
-                  />
-                  <span class="link-styles-secondary d-flex align-self-center" style="color: #000;"
-                    >I have read and accept the
-                    <a href="/terms.html" class="text-decoration-none" style="color: #7C7C7C !important">
-                      Terms and Conditions</a
-                    ></span
-                  >
-                </label>
-                <label class="d-flex flex-row align-items-center">
-                  <input type="checkbox" class="font-poppins checkbox me-1" />
-                  <span class=""  style="color: #000;">Subscribe to the newsletter to stay up to date</span>
-                </label>
-              </div>
-
-              <span class="link-styles-secondary d-flex align-self-center"
-                >Already have an account?
-                <a href="/index.html" class="text-decoration-none" style="color: #7C7C7C !important">
-                  Sign In</a
-                ></span
-              >
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <section class="" style="border-top: solid 1px #000">
-      <footer
-        class="footer w-100 py-3 px-0 mx-0 d-flex flex-column-reverse flex-md-row align-items-center"
-      >
-        <div
-          class="col-12 col-md-6 px-0 mx-0 d-flex text-center text-md-start justify-content-center justify-content-md-start"
-        >
-          <p class="font-poppins mb-0 text-size">
-            Copyright &copy; <span id="year"></span> ThinktankX. All Rights
-            Reserved.
-          </p>
-        </div>
-        <div
-          class="col-12 col-md-6 px-0 mx-0 d-flex text-center text-md-end justify-content-center justify-content-md-end"
-        >
-          <ul class="d-flex flex-row">
-            <li>
-              <a href="#" class="font-poppins mb-0 text-size"
-                >Terms and conditions</a
-              >
-            </li>
-            <li class="d-block d-md-none">|</li>
-            <li>
-              <a href="#" class="font-poppins mb-0 text-size">Privacy policy</a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+<body class="d-flex flex-column vh-100">
+  <!-- Navbar -->
+  <div class="shadow-bottom">
+    <section class="">
+      <nav class="navbar p-0 m-0">
+        <a class="navbar-brand font-inter m-0 p-0" href="/">
+          <img src="assets/img/ThinktankX_logo.svg" alt="" style="width: 150px; height: auto" class="img-fluid" />
+        </a>
+      </nav>
     </section>
+  </div>
+  <main class="flex-fill m-0 p-0 fill-area-container">
+    <section class="h-100 d-flex flex-column justify-content-center scroll-area">
+      <div class="d-flex flex-column flex-lg-row mobile-scroll-sec">
+        <div data-aos="fade-right" data-aos-duration="1000"
+          class="col-12 col-xl-7 p-0 p-lg-5 d-none d-xl-flex img-conainer justify-content-center align-items-center">
+          <img src="assets/img/register-side.png" alt="" class="img-fluid" />
+        </div>
+        <div data-aos="fade-left" data-aos-duration="1000"
+          class="col-12 col-xl-5 p-0 p-lg-4 d-flex justify-content-center align-items-center form-wrapper">
+          <!-- register form -->
+          <form id="accountForm" class="d-flex flex-column form-styles" novalidate>
+            <div class="d-flex text-center w-100">
+              <h3 class="text-uppercase w-100 text-center font-inter" style="font-weight: 700">
+                Register Your Account
+              </h3>
+            </div>
+            <div class="toggle-container d-flex flex-row">
+              <label class="mr-3" for="flexSwitchCheck">Individual</label>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheck"
+                  onchange="toggleFields()" />
+              </div>
+              <label class="ml-3" for="flexSwitchCheck">Government and Organization</label>
+            </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="assets/js/script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+            <div id="individualFields">
+              <input type="text" class="custom-input" id="name" placeholder="Name" required />
+              <div class="error" id="nameError"></div>
+
+              <input type="email" class="custom-input" id="email" placeholder="Email" required />
+              <div class="error" id="emailError"></div>
+
+              <input type="tel" class="custom-input" id="phone" placeholder="Phone Number" required />
+              <div class="error" id="phoneError"></div>
+
+              <div class="password-container">
+                <input type="password" class="custom-input" id="password" placeholder="Password" required />
+                <img src="assets/img/EyeClosed.svg" class="toggle-eye" id="togglePassword"
+                  onclick="togglePasswordVisibility('password', 'togglePassword')" />
+              </div>
+              <div class="error" id="passwordError"></div>
+
+              <div class="password-container">
+                <input type="password" class="custom-input" id="repeatPassword" placeholder="Repeat Password"
+                  required />
+                <img src="assets/img/EyeClosed.svg" class="toggle-eye" id="toggleRepeatPassword"
+                  onclick="togglePasswordVisibility('repeatPassword', 'toggleRepeatPassword')" />
+              </div>
+              <div class="error" id="repeatPasswordError"></div>
+            </div>
+
+            <div id="organizationFields" style="display: none">
+              <input type="text" class="custom-input" id="orgName" placeholder="Organization Name" required />
+              <div class="error" id="orgNameError"></div>
+
+              <input type="text" class="custom-input" id="orgContactName" placeholder="Name" required />
+              <div class="error" id="orgContactNameError"></div>
+
+              <input type="email" class="custom-input" id="orgEmail" placeholder="Email" required />
+              <div class="error" id="orgEmailError"></div>
+
+              <input type="tel" class="custom-input" id="orgPhone" placeholder="Phone number" required />
+              <div class="error" id="orgPhoneError"></div>
+
+              <div class="password-container">
+                <input type="password" class="custom-input" id="orgPassword" placeholder="Password" required />
+                <img src="assets/img/EyeClosed.svg" class="toggle-eye" id="toggleOrgPassword"
+                  onclick="togglePasswordVisibility('orgPassword', 'toggleOrgPassword')" />
+              </div>
+              <div class="error" id="orgPasswordError"></div>
+
+              <div class="password-container">
+                <input type="password" class="custom-input" id="orgRepeatPassword" placeholder="Repeat Password"
+                  required />
+                <img src="assets/img/EyeClosed.svg" class="toggle-eye" id="toggleOrgRepeatPassword"
+                  onclick="togglePasswordVisibility('orgRepeatPassword', 'toggleOrgRepeatPassword')" />
+              </div>
+              <div class="error" id="orgRepeatPasswordError"></div>
+            </div>
+
+            <button type="submit" class="button font-poppins">
+              CREATE MY ACCOUNT
+            </button>
+
+            <div class="d-flex flex-column checkInput">
+              <label class="mb-2 mb-2 d-flex flex-row align-items-start">
+                <input type="checkbox" checked required class="font-poppins checkbox me-1" />
+                <span class="link-styles-secondary d-flex flex-wrap align-self-center" style="color: #000;">I have read
+                  and accept the
+                  <a href="/terms.html" class="text-decoration-none" style="color: #7C7C7C !important">
+                    Terms and Conditions</a></span>
+              </label>
+              <label class="d-flex flex-row align-items-center">
+                <input type="checkbox" class="font-poppins checkbox me-1" />
+                <span class="" style="color: #000;">Subscribe to the newsletter to stay up to date</span>
+              </label>
+            </div>
+
+            <span class="link-styles-secondary d-flex align-self-center">Already have an account?
+              <a href="/index.html" class="text-decoration-none" style="color: #7C7C7C !important">
+                Sign In</a></span>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <section class="" style="border-top: solid 1px #000">
+    <footer class="footer w-100 py-3 px-0 mx-0 d-flex flex-column-reverse flex-md-row align-items-center">
+      <div
+        class="col-12 col-md-6 px-0 mx-0 d-flex text-center text-md-start justify-content-center justify-content-md-start">
+        <p class="font-poppins mb-0 text-size">
+          Copyright &copy; <span id="year"></span> ThinktankX. All Rights
+          Reserved.
+        </p>
+      </div>
+      <div
+        class="col-12 col-md-6 px-0 mx-0 d-flex text-center text-md-end justify-content-center justify-content-md-end">
+        <ul class="d-flex flex-row">
+          <li>
+            <a href="#" class="font-poppins mb-0 text-size">Terms and conditions</a>
+          </li>
+          <li class="d-block d-md-none">|</li>
+          <li>
+            <a href="#" class="font-poppins mb-0 text-size">Privacy policy</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script>
+    function togglePasswordVisibility(passwordId, eyeIconId) {
+      const passwordField = document.getElementById(passwordId);
+      const eyeIcon = document.getElementById(eyeIconId);
+
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        eyeIcon.src = "assets/img/EyeOpened.svg";
+      } else {
+        passwordField.type = "password";
+        eyeIcon.src = "assets/img/EyeClosed.svg";
+      }
+    }
+  </script>
+</body>
+
 </html>
