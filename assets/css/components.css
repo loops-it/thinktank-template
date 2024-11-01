@@ -158,6 +158,17 @@ form label {
     font-size: 18px;
 }
 
+.verification-input {
+    width: 43px;
+    height: 43px;
+    text-align: center;
+    font-size: 1.5em;
+    margin-right: 0.5em;
+    background-color: #D9D9D9;
+    border-radius: 8px;
+    border: solid 1px #000;
+  }
+
 /* Responsive styles */
 /* ----------------------------------- */
 @media screen and (max-width: 576px) {
