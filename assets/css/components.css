@@ -239,3 +239,9 @@ form label {
         padding: 0 !important;
     }
 }
+
+@media screen and (min-width: 1400px){
+#loginForm input{
+    margin-bottom: 15px !important;
+}
+}
