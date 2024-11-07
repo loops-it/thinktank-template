@@ -37,98 +37,100 @@
         <div data-aos="fade-left" data-aos-duration="1000"
           class="mobile-padding-bottom col-12 col-xl-5 p-0 p-lg-4 d-flex justify-content-center align-items-center form-wrapper">
           <!-- register form -->
-          <form id="accountForm" class="d-flex flex-column form-styles" novalidate>
-            <div class="d-flex text-center w-100">
-              <h3 class="text-uppercase w-100 text-center font-inter" style="font-weight: 700">
-                Register Your Account
-              </h3>
-            </div>
-            <div class="toggle-container d-flex flex-row">
-              <label class="mr-3" for="flexSwitchCheck">Individual</label>
-              <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheck"
-                  onchange="toggleFields()" />
+          <div class="wrapper-1280-scroll">
+            <form id="accountForm" class="d-flex flex-column form-styles" novalidate>
+              <div class="d-flex text-center w-100">
+                <h3 class="text-uppercase w-100 text-center font-inter" style="font-weight: 700">
+                  Register Your Account
+                </h3>
               </div>
-              <label class="ml-3" for="flexSwitchCheck">Government and Organization</label>
-            </div>
-
-            <div id="individualFields">
-              <input type="text" class="custom-input" id="name" placeholder="Name" required />
-              <div class="error" id="nameError"></div>
-
-              <input type="email" class="custom-input" id="email" placeholder="Email" required />
-              <div class="error" id="emailError"></div>
-
-              <input type="tel" class="custom-input" id="phone" placeholder="Phone Number" required />
-              <div class="error" id="phoneError"></div>
-
-              <div class="password-container">
-                <input type="password" class="custom-input" id="password" placeholder="Password" required />
-                <img src="assets/img/EyeClosed.svg" class="toggle-eye" id="togglePassword"
-                  onclick="togglePasswordVisibility('password', 'togglePassword')" />
+              <div class="toggle-container d-flex flex-row">
+                <label class="mr-3" for="flexSwitchCheck">Individual</label>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheck"
+                    onchange="toggleFields()" />
+                </div>
+                <label class="ml-3" for="flexSwitchCheck">Government and Organization</label>
               </div>
-              <div class="error" id="passwordError"></div>
-
-              <div class="password-container">
-                <input type="password" class="custom-input" id="repeatPassword" placeholder="Repeat Password"
-                  required />
-                <img src="assets/img/EyeClosed.svg" class="toggle-eye" id="toggleRepeatPassword"
-                  onclick="togglePasswordVisibility('repeatPassword', 'toggleRepeatPassword')" />
+  
+              <div id="individualFields">
+                <input type="text" class="custom-input" id="name" placeholder="Name" required />
+                <div class="error" id="nameError"></div>
+  
+                <input type="email" class="custom-input" id="email" placeholder="Email" required />
+                <div class="error" id="emailError"></div>
+  
+                <input type="tel" class="custom-input" id="phone" placeholder="Phone Number" required />
+                <div class="error" id="phoneError"></div>
+  
+                <div class="password-container">
+                  <input type="password" class="custom-input" id="password" placeholder="Password" required />
+                  <img src="assets/img/EyeClosed.svg" class="toggle-eye" id="togglePassword"
+                    onclick="togglePasswordVisibility('password', 'togglePassword')" />
+                </div>
+                <div class="error" id="passwordError"></div>
+  
+                <div class="password-container">
+                  <input type="password" class="custom-input" id="repeatPassword" placeholder="Repeat Password"
+                    required />
+                  <img src="assets/img/EyeClosed.svg" class="toggle-eye" id="toggleRepeatPassword"
+                    onclick="togglePasswordVisibility('repeatPassword', 'toggleRepeatPassword')" />
+                </div>
+                <div class="error" id="repeatPasswordError"></div>
               </div>
-              <div class="error" id="repeatPasswordError"></div>
-            </div>
-
-            <div id="organizationFields" style="display: none">
-              <input type="text" class="custom-input" id="orgName" placeholder="Organization Name" required />
-              <div class="error" id="orgNameError"></div>
-
-              <input type="text" class="custom-input" id="orgContactName" placeholder="Name" required />
-              <div class="error" id="orgContactNameError"></div>
-
-              <input type="email" class="custom-input" id="orgEmail" placeholder="Email" required />
-              <div class="error" id="orgEmailError"></div>
-
-              <input type="tel" class="custom-input" id="orgPhone" placeholder="Phone number" required />
-              <div class="error" id="orgPhoneError"></div>
-
-              <div class="password-container">
-                <input type="password" class="custom-input" id="orgPassword" placeholder="Password" required />
-                <img src="assets/img/EyeClosed.svg" class="toggle-eye" id="toggleOrgPassword"
-                  onclick="togglePasswordVisibility('orgPassword', 'toggleOrgPassword')" />
+  
+              <div id="organizationFields" style="display: none">
+                <input type="text" class="custom-input" id="orgName" placeholder="Organization Name" required />
+                <div class="error" id="orgNameError"></div>
+  
+                <input type="text" class="custom-input" id="orgContactName" placeholder="Name" required />
+                <div class="error" id="orgContactNameError"></div>
+  
+                <input type="email" class="custom-input" id="orgEmail" placeholder="Email" required />
+                <div class="error" id="orgEmailError"></div>
+  
+                <input type="tel" class="custom-input" id="orgPhone" placeholder="Phone number" required />
+                <div class="error" id="orgPhoneError"></div>
+  
+                <div class="password-container">
+                  <input type="password" class="custom-input" id="orgPassword" placeholder="Password" required />
+                  <img src="assets/img/EyeClosed.svg" class="toggle-eye" id="toggleOrgPassword"
+                    onclick="togglePasswordVisibility('orgPassword', 'toggleOrgPassword')" />
+                </div>
+                <div class="error" id="orgPasswordError"></div>
+  
+                <div class="password-container">
+                  <input type="password" class="custom-input" id="orgRepeatPassword" placeholder="Repeat Password"
+                    required />
+                  <img src="assets/img/EyeClosed.svg" class="toggle-eye" id="toggleOrgRepeatPassword"
+                    onclick="togglePasswordVisibility('orgRepeatPassword', 'toggleOrgRepeatPassword')" />
+                </div>
+                <div class="error" id="orgRepeatPasswordError"></div>
               </div>
-              <div class="error" id="orgPasswordError"></div>
-
-              <div class="password-container">
-                <input type="password" class="custom-input" id="orgRepeatPassword" placeholder="Repeat Password"
-                  required />
-                <img src="assets/img/EyeClosed.svg" class="toggle-eye" id="toggleOrgRepeatPassword"
-                  onclick="togglePasswordVisibility('orgRepeatPassword', 'toggleOrgRepeatPassword')" />
+  
+              <button type="submit" class="button font-poppins">
+                CREATE MY ACCOUNT
+              </button>
+  
+              <div class="d-flex flex-column checkInput">
+                <label class="mb-2 mb-2 d-flex flex-row align-items-start">
+                  <input type="checkbox" checked required class="font-poppins checkbox me-1" />
+                  <span class="link-styles-secondary d-flex flex-wrap align-self-center" style="color: #000;">I have read
+                    and accept the
+                    <a href="#" class="text-decoration-none" style="color: #7C7C7C !important">
+                      Terms and Conditions</a></span>
+                </label>
+                <label class="d-flex flex-row align-items-center">
+                  <input type="checkbox" class="font-poppins checkbox me-1" />
+                  <span class="" style="color: #000;">Subscribe to the newsletter to stay up to date</span>
+                </label>
               </div>
-              <div class="error" id="orgRepeatPasswordError"></div>
-            </div>
-
-            <button type="submit" class="button font-poppins">
-              CREATE MY ACCOUNT
-            </button>
-
-            <div class="d-flex flex-column checkInput">
-              <label class="mb-2 mb-2 d-flex flex-row align-items-start">
-                <input type="checkbox" checked required class="font-poppins checkbox me-1" />
-                <span class="link-styles-secondary d-flex flex-wrap align-self-center" style="color: #000;">I have read
-                  and accept the
-                  <a href="#" class="text-decoration-none" style="color: #7C7C7C !important">
-                    Terms and Conditions</a></span>
-              </label>
-              <label class="d-flex flex-row align-items-center">
-                <input type="checkbox" class="font-poppins checkbox me-1" />
-                <span class="" style="color: #000;">Subscribe to the newsletter to stay up to date</span>
-              </label>
-            </div>
-
-            <span class="link-styles-secondary d-flex align-self-center">Already have an account?
-              <a href="index.html" class="text-decoration-none" style="color: #7C7C7C !important">
-                Sign In</a></span>
-          </form>
+  
+              <span class="link-styles-secondary d-flex align-self-center">Already have an account?
+                <a href="index.html" class="text-decoration-none" style="color: #7C7C7C !important">
+                  Sign In</a></span>
+            </form>
+          </div>
         </div>
       </div>
     </section>
