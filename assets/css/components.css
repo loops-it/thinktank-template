@@ -197,6 +197,9 @@ form label {
   form label {
     font-size: 12px;
   }
+  .link-styles-secondary {
+    font-size: 12px;
+  }
 
   form {
     padding: 40px 15px;

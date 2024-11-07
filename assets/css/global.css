@@ -62,7 +62,7 @@ section {
   }
 
   .mobile-scroll-sec {
-    margin-top: 160px;
+    /* margin-top: 160px; */
     margin-bottom: 40px;
   }
 }
@@ -168,7 +168,15 @@ section {
     display: none;
   }
 }
-
+@media screen and (max-width: 600px) and (max-height: 741px) {
+  .mobile-height{
+    height: 90vh;
+    padding-top: 60px !important;
+  }
+  .mobile-padding-bottom{
+    padding-bottom: 20px !important;
+  }
+}
 
 
 
