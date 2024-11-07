@@ -157,7 +157,17 @@ section {
 .scroll-area::-webkit-scrollbar {
   display: none;
 }
-
+@media screen and (min-width: 768px) {
+  .scroll-area {
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+  }
+  
+  .scroll-area::-webkit-scrollbar {
+    display: none;
+  }
+}
 
 
 
